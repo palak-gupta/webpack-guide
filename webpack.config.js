@@ -9,9 +9,13 @@ const config = {
     },
     plugins: [
         new htmlWebpackPlugin(
-            {title: 'Output Management'}
+            {title: 'Development SetUp'}
         )
     ],
+    devtool: 'eval-source-map',
+    devServer: {
+        static: './dist'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[hash].js',
