@@ -1,11 +1,21 @@
-const path = require('path')
+const path = require('path');
+const htmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
     mode: 'development',
-    entry: '/src/index.js', // Entry file which will have the codebase that needs to be bundled
+    entry: {
+        index: './src/index.js',
+        print: './src/print.js'
+    },
+    plugins: [
+        new htmlWebpackPlugin(
+            {title: 'Output Management'}
+        )
+    ],
     output: {
-        path: path.resolve(__dirname, 'dist'), // directory where bundle will be generated in 
-        filename: 'bundle.js' // filename of the generated bundle
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].[hash].js',
+        clean: true,
     },
     module: {
         rules: [
@@ -31,7 +41,7 @@ const config = {
                 type: 'asset/resource'
             },
         ]
-    }
+    },
 }
 
 module.exports = config

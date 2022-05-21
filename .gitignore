@@ -2,4 +2,3 @@
 /dist/main.js
 .DS_Store
 /dist/*
-!/dist/index.html
