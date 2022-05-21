@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('./Roboto/Roboto-LightItalic.ttf');
+};
+
 .hello {
     color: red;
+    font-family: 'Roboto-Light';
 }

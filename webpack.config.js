@@ -27,9 +27,9 @@ const config = {
                 ]
             },
             {
-                test: /\.jpg$/i,
+                test: /\.(jpg|ttf)$/i,
                 type: 'asset/resource'
-            }
+            },
         ]
     }
 }
