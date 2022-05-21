@@ -25,6 +25,10 @@ const config = {
                     },
                     'sass-loader'
                 ]
+            },
+            {
+                test: /\.jpg$/i,
+                type: 'asset/resource'
             }
         ]
     }
